@@ -11,7 +11,7 @@
       AppView.__super__.constructor.apply(this, arguments);
     }
 
-    AppView.prototype.el = '#app';
+    AppView.prototype.el = 'body';
 
     AppView.prototype.templateURL = "templates/app.html";
 

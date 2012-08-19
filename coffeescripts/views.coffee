@@ -2,7 +2,7 @@
 
 class AppView extends Backbone.View
 
-  el: '#app'
+  el: 'body'
   templateURL: "templates/app.html"
   
   initialize: (options) ->
