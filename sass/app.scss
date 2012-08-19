@@ -44,3 +44,92 @@
 // @import "foundation/components/modules/reveal";
 // @import "foundation/components/modules/offcanvas";
 
+@import "foundicons";
+
+header {
+  nav { margin-top: 14px; }
+}
+
+.alerts { min-height: 30px; }
+
+footer {}
+
+.projects {
+  clear: both;
+  .project {
+    margin: 30px;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    padding: 10px 20px;
+    background: #ddd;
+    border: 1px solid #555;
+    
+    &:before, &:after {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      content: "";
+      border: 1px solid #555;
+      top:-21px;
+      left:-21px;
+    }
+    &:before {
+      height: 100%;
+      top:-11px;
+      border-right: none;
+      @include skew(0, 45deg);
+    }
+    &:after {
+      width: 100%;
+      left: -11px;
+      border-bottom: none;
+      @include skew(45deg, 0);
+    }
+    .members {
+      list-style-type: none;
+      li {display: inline;}
+    }
+  }
+}
+
+
+
+.backlog, .icebox, .current {
+  overflow: hidden;
+}
+
+.iteration {}
+
+.stories {
+  display: inline-block;
+  white-space: nowrap;
+  .story {
+     width:2px;
+     height:  220px;
+     margin-bottom:-10px;
+     display: inline-block;
+     .test {
+       background: blue ;
+     }
+     .card {
+        white-space: normal;
+        padding: 15px;
+        position: absolute;
+        width: 150px;
+        height: 200px;
+        border: 1px solid #555;
+        background: #eee;
+     }
+     @include transition(width 0.1s)
+     
+  }
+  &.open {
+    .story{ width: 160px; }  
+  }
+
+  
+}
+

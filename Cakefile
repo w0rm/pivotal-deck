@@ -19,7 +19,7 @@ task 'watch', 'Watches for changed source files and builds them (scss to css, co
   runCommand 'coffee', '-o', 'javascripts', '-wc', 'coffeescripts'
 
 
-option '-p', '--port [PORT]', 'Sets the server port for `cake server`'
+option '-p', '--port [PORT]', 'Sets the server port for `cake server`, default value is 8080'
 task 'server', "Serves static files and proxies api calls", (options) ->
   port = options.port ? 8080
   host = "www.pivotaltracker.com"
@@ -29,7 +29,6 @@ task 'server', "Serves static files and proxies api calls", (options) ->
   server = http.createServer (request, response) ->
     
     requestPath = url.parse(request.url).pathname
-    
     
     if requestPath.indexOf(apiPath) is 0
       

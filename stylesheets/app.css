@@ -4192,3 +4192,376 @@ p.vevent abbr {
   border: none;
   padding: 0 1px;
 }
+
+/* font-face */
+@font-face {
+  font-family: "GeneralFoundicons";
+  src: url("../fonts/general_foundicons.eot");
+  src: url("../fonts/general_foundicons.eot?#iefix") format("embedded-opentype"), url("../fonts/general_foundicons.woff") format("woff"), url("../fonts/general_foundicons.ttf") format("truetype"), url("../fonts/general_foundicons.svg#GeneralFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+/* line 7, ../sass/_foundicons.scss */
+[class*="ico-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+/* line 17, ../sass/_foundicons.scss */
+[class*="ico-"]:before {
+  font-family: "GeneralFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+/* icons */
+/* line 84, ../sass/_settings.scss */
+.ico-settings:before {
+  content: "\f000";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-heart:before {
+  content: "\f001";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-star:before {
+  content: "\f002";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-plus:before {
+  content: "\f003";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-minus:before {
+  content: "\f004";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-checkmark:before {
+  content: "\f005";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-remove:before {
+  content: "\f006";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-mail:before {
+  content: "\f007";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-calendar:before {
+  content: "\f008";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-page:before {
+  content: "\f009";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-tools:before {
+  content: "\f00a";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-globe:before {
+  content: "\f00b";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-home:before {
+  content: "\f00c";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-quote:before {
+  content: "\f00d";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-people:before {
+  content: "\f00e";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-monitor:before {
+  content: "\f00f";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-laptop:before {
+  content: "\f010";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-phone:before {
+  content: "\f011";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-cloud:before {
+  content: "\f012";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-error:before {
+  content: "\f013";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-right-arrow:before {
+  content: "\f014";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-left-arrow:before {
+  content: "\f015";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-up-arrow:before {
+  content: "\f016";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-down-arrow:before {
+  content: "\f017";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-trash:before {
+  content: "\f018";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-add-doc:before {
+  content: "\f019";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-edit:before {
+  content: "\f01a";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-lock:before {
+  content: "\f01b";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-unlock:before {
+  content: "\f01c";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-refresh:before {
+  content: "\f01d";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-paper-clip:before {
+  content: "\f01e";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-video:before {
+  content: "\f01f";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-photo:before {
+  content: "\f020";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-graph:before {
+  content: "\f021";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-idea:before {
+  content: "\f022";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-mic:before {
+  content: "\f023";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-cart:before {
+  content: "\f024";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-address-book:before {
+  content: "\f025";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-compass:before {
+  content: "\f026";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-flag:before {
+  content: "\f027";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-location:before {
+  content: "\f028";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-clock:before {
+  content: "\f029";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-folder:before {
+  content: "\f02a";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-inbox:before {
+  content: "\f02b";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-website:before {
+  content: "\f02c";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-smiley:before {
+  content: "\f02d";
+}
+
+/* line 84, ../sass/_settings.scss */
+.ico-search:before {
+  content: "\f02e";
+}
+
+/* line 50, ../sass/app.scss */
+header nav {
+  margin-top: 14px;
+}
+
+/* line 53, ../sass/app.scss */
+.alerts {
+  min-height: 30px;
+}
+
+/* line 57, ../sass/app.scss */
+.projects {
+  clear: both;
+}
+/* line 59, ../sass/app.scss */
+.projects .project {
+  margin: 30px;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  padding: 10px 20px;
+  background: #ddd;
+  border: 1px solid #555;
+}
+/* line 70, ../sass/app.scss */
+.projects .project:before, .projects .project:after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  content: "";
+  border: 1px solid #555;
+  top: -21px;
+  left: -21px;
+}
+/* line 79, ../sass/app.scss */
+.projects .project:before {
+  height: 100%;
+  top: -11px;
+  border-right: none;
+  -webkit-transform: skew(0, 45deg);
+  -moz-transform: skew(0, 45deg);
+  -ms-transform: skew(0, 45deg);
+  -o-transform: skew(0, 45deg);
+  transform: skew(0, 45deg);
+}
+/* line 85, ../sass/app.scss */
+.projects .project:after {
+  width: 100%;
+  left: -11px;
+  border-bottom: none;
+  -webkit-transform: skew(45deg, 0);
+  -moz-transform: skew(45deg, 0);
+  -ms-transform: skew(45deg, 0);
+  -o-transform: skew(45deg, 0);
+  transform: skew(45deg, 0);
+}
+/* line 91, ../sass/app.scss */
+.projects .project .members {
+  list-style-type: none;
+}
+/* line 93, ../sass/app.scss */
+.projects .project .members li {
+  display: inline;
+}
+
+/* line 100, ../sass/app.scss */
+.backlog, .icebox, .current {
+  overflow: hidden;
+}
+
+/* line 106, ../sass/app.scss */
+.stories {
+  display: inline-block;
+  white-space: nowrap;
+}
+/* line 109, ../sass/app.scss */
+.stories .story {
+  width: 2px;
+  height: 220px;
+  margin-bottom: -10px;
+  display: inline-block;
+  -webkit-transition: width 0.1s;
+  -moz-transition: width 0.1s;
+  -o-transition: width 0.1s;
+  transition: width 0.1s;
+}
+/* line 114, ../sass/app.scss */
+.stories .story .test {
+  background: blue;
+}
+/* line 117, ../sass/app.scss */
+.stories .story .card {
+  white-space: normal;
+  padding: 15px;
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #555;
+  background: #eee;
+}
+/* line 130, ../sass/app.scss */
+.stories.open .story {
+  width: 160px;
+}

@@ -5,16 +5,28 @@ class AppView extends Backbone.View
   el: 'body'
   templateURL: "templates/app.html"
   
-  initialize: (options) ->
-    @headerView = new AppHeaderView
-    @footerView = new AppFooterView
-  
   render: ->
     # appView should be rendered only once
     @$el.html @template()
-    _.invoke [@headerView, @footerView], "render"
+    _.invoke [new AppHeaderView, new AppFooterView], "render"
     @
+  
+  renderError: (error) ->
+    @$(".alerts").append (new ErrorView error).render().el
 
+
+class ErrorView extends Backbone.View
+  
+  tagName: "div"
+  className: "alert-box alert"
+  templateURL: "templates/error.html"
+  
+  initialize: (error) ->
+    @error = error
+  
+  render: ->
+    @$el.html @template(@error)
+    @  
 
 class AppHeaderView extends Backbone.View
   
@@ -45,8 +57,11 @@ class LoginView extends Backbone.View
     "submit form": "login"
 
   initialize: (options) ->
-    @model.on "error", =>
+    @model.on "error", (model, error) =>
       @$("[type=submit]").removeAttr "disabled"
+      @$("form").addClass "error"
+      if _.isString error
+        app.appView.renderError message: error
 
   render: ->
     @$el.html @template()
@@ -55,7 +70,7 @@ class LoginView extends Backbone.View
   login: (e) ->
     e.preventDefault()
     @$("[type=submit]").attr "disabled", "disabled"
-    res = @model.save
+    @model.save
       username: @$("[name=username]").val()
       password: @$("[name=password]").val()
     @
@@ -64,14 +79,17 @@ class LoginView extends Backbone.View
 class ProjectsView extends Backbone.View
 
   el: '#page'
-
+  templateURL: "templates/projects.html"
+  
   initialize: (options) ->
     @collection.on "reset", @render, @
+    @$el.html @template()
+    @$projects = @$(".projects")
 
   render: ->
-    @$el.empty()
+    @$projects.empty()
     for project in @collection.models
-      @$el.append (new ProjectItemView model: project).render().el
+      @$projects.append (new ProjectItemView model: project).render().el
     @
 
 
@@ -126,7 +144,10 @@ class StoryItemView extends Backbone.View
 
 
 class StoriesView extends Backbone.View
-
+  
+  events:
+    "click .story": "open"
+  
   initialize: (options) ->
     @collection.on "reset", @render, @
 
@@ -135,6 +156,9 @@ class StoriesView extends Backbone.View
     for story in @collection.models
       @$el.append (new StoryItemView model: story).render().el
     @
+    
+  open: ->
+    @$el.toggleClass "open"
 
 
 class IterationItemView extends Backbone.View
@@ -172,6 +196,7 @@ class IterationsView extends Backbone.View
   IterationsView: IterationsView
   AppView: AppView
   LoginView: LoginView
+  ErrorView: ErrorView
   AppHeaderView: AppHeaderView
   AppFooterView: AppFooterView
 

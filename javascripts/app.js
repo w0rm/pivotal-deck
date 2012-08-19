@@ -75,11 +75,17 @@
   })(Backbone.Router);
 
   app.util.loadTemplates(app.views).done(function() {
+    $(document).foundationAlerts();
+    $(document).foundationButtons();
+    $(document).tooltips();
     app.appRouter = new AppRouter;
     app.appView = (new app.views.AppView).render();
     $.ajaxSetup({
       statusCode: {
-        403: function() {
+        403: function(e) {
+          app.appView.renderError({
+            message: "Authorization error, please enter correct credentials."
+          });
           return app.appRouter.navigate("login", {
             trigger: true
           });

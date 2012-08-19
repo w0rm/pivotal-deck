@@ -13,6 +13,16 @@
 
     Auth.prototype.url = app.util.apiURL("tokens/active");
 
+    Auth.prototype.validate = function(attributes) {
+      var errors;
+      errors = [];
+      if (!/\S/.test(attributes.username)) errors.push("Please enter your email.");
+      if (!/\S/.test(attributes.password)) {
+        errors.push("Please enter your password.");
+      }
+      if (errors.length > 0) return errors.join("\n");
+    };
+
     Auth.prototype.parse = function(response) {
       return Jath.parse({
         token: 'token/guid'
@@ -61,7 +71,16 @@
       if ($.isXMLDoc(response)) {
         return Jath.parse({
           id: 'project/id',
-          name: 'project/name'
+          name: 'project/name',
+          current_velocity: 'current_velocity',
+          last_activity_at: 'last_activity_at',
+          members: [
+            "memberships/membership", {
+              id: 'id',
+              name: 'person/name',
+              role: 'role'
+            }
+          ]
         }, response);
       } else {
         return response;
@@ -103,7 +122,16 @@
       return Jath.parse([
         "projects/project", {
           id: 'id',
-          name: 'name'
+          name: 'name',
+          current_velocity: 'current_velocity',
+          last_activity_at: 'last_activity_at',
+          members: [
+            "memberships/membership", {
+              id: 'id',
+              name: 'person/name',
+              role: 'role'
+            }
+          ]
         }
       ], response);
     };

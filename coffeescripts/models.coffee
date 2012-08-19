@@ -3,7 +3,18 @@
 class Auth extends Backbone.Model
 
   url: app.util.apiURL "tokens/active"
-
+  
+  validate: (attributes) ->
+    errors = []
+    unless /\S/.test attributes.username
+      errors.push "Please enter your email."
+    
+    unless /\S/.test attributes.password
+      errors.push "Please enter your password."
+    
+    if errors.length > 0
+      errors.join "\n"
+    
   parse: (response) ->
     Jath.parse token: 'token/guid', response
 
@@ -36,7 +47,14 @@ class Project extends Backbone.Model
     # If model is created on collection.fetch,
     # then we don't need to parse xml
     if $.isXMLDoc response
-      Jath.parse id: 'project/id', name: 'project/name', response
+      Jath.parse
+        id: 'project/id'
+        name: 'project/name'
+        current_velocity: 'current_velocity'
+        last_activity_at: 'last_activity_at'
+        members: ["memberships/membership", id: 'id', name: 'person/name', role: 'role']
+      ,
+        response
     else
       response
 
@@ -57,7 +75,15 @@ class Projects extends Backbone.Collection
   url: app.util.apiURL "projects"
 
   parse: (response) ->
-    Jath.parse ["projects/project", id: 'id', name: 'name'], response
+    Jath.parse [
+      "projects/project"
+    ,
+      id: 'id'
+      name: 'name'
+      current_velocity: 'current_velocity'
+      last_activity_at: 'last_activity_at'
+      members: ["memberships/membership", id: 'id', name: 'person/name', role: 'role']
+    ], response
 
 
 class Story extends Backbone.Model

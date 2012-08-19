@@ -1,1 +1,12 @@
 <h4><a href="#projects/<%= id %>"><%= name %></a></h4>
+<p>Velocity: <%= current_velocity %></p>
+<p>Members: <%= members.length %> </p>
+<ul class="members">
+<% _.each(members, function(member) { %>
+    <li><i title="Hi! I'm <%= member.name %>, the <%= member.role.toLowerCase() %>."
+        class="ico-smiley has-tip tip-top" data-width="150"></i></li>
+<% }); %>
+</ul>
+<% if (last_activity_at) { %>
+    <p>Updated at: <%= last_activity_at %></p>
+<% } %>

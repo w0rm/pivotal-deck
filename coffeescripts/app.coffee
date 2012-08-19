@@ -35,14 +35,15 @@ class AppRouter extends Backbone.Router
 
 
 app.util.loadTemplates(app.views).done =>
-  #$(document).foundationAlerts()
-  #$(document).foundationButtons()
+  
+  $(document).foundationAlerts()
+  $(document).foundationButtons()
   #$(document).foundationAccordion()
   #$(document).foundationNavigation()
   #$(document).foundationCustomForms()
   #$(document).foundationMediaQueryViewer()
   #$(document).foundationTabs callback: $.foundation.customForms.appendCustomMarkup
-  #$(document).tooltips()
+  $(document).tooltips()
   #$('input, textarea').placeholder()
   
   app.appRouter = new AppRouter # initialize only after templates are loaded
@@ -55,7 +56,9 @@ app.util.loadTemplates(app.views).done =>
     statusCode:
       # 401 is changed to 403 by proxy server
       # to prevent default browser's auth dialog
-      403: -> app.appRouter.navigate "login", trigger: true
+      403: (e) -> 
+        app.appView.renderError message: "Authorization error, please enter correct credentials."
+        app.appRouter.navigate "login", trigger: true
     # To prevent caching, uncomment the line below
     #cache: false
 

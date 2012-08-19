@@ -1,5 +1,5 @@
 (function() {
-  var AppFooterView, AppHeaderView, AppView, IterationItemView, IterationsView, LoginView, ProjectItemView, ProjectView, ProjectsView, StoriesView, StoryItemView, _ref,
+  var AppFooterView, AppHeaderView, AppView, ErrorView, IterationItemView, IterationsView, LoginView, ProjectItemView, ProjectView, ProjectsView, StoriesView, StoryItemView, _ref,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
@@ -15,18 +15,44 @@
 
     AppView.prototype.templateURL = "templates/app.html";
 
-    AppView.prototype.initialize = function(options) {
-      this.headerView = new AppHeaderView;
-      return this.footerView = new AppFooterView;
-    };
-
     AppView.prototype.render = function() {
       this.$el.html(this.template());
-      _.invoke([this.headerView, this.footerView], "render");
+      _.invoke([new AppHeaderView, new AppFooterView], "render");
       return this;
     };
 
+    AppView.prototype.renderError = function(error) {
+      return this.$(".alerts").append((new ErrorView(error)).render().el);
+    };
+
     return AppView;
+
+  })(Backbone.View);
+
+  ErrorView = (function(_super) {
+
+    __extends(ErrorView, _super);
+
+    function ErrorView() {
+      ErrorView.__super__.constructor.apply(this, arguments);
+    }
+
+    ErrorView.prototype.tagName = "div";
+
+    ErrorView.prototype.className = "alert-box alert";
+
+    ErrorView.prototype.templateURL = "templates/error.html";
+
+    ErrorView.prototype.initialize = function(error) {
+      return this.error = error;
+    };
+
+    ErrorView.prototype.render = function() {
+      this.$el.html(this.template(this.error));
+      return this;
+    };
+
+    return ErrorView;
 
   })(Backbone.View);
 
@@ -90,8 +116,14 @@
 
     LoginView.prototype.initialize = function(options) {
       var _this = this;
-      return this.model.on("error", function() {
-        return _this.$("[type=submit]").removeAttr("disabled");
+      return this.model.on("error", function(model, error) {
+        _this.$("[type=submit]").removeAttr("disabled");
+        _this.$("form").addClass("error");
+        if (_.isString(error)) {
+          return app.appView.renderError({
+            message: error
+          });
+        }
       });
     };
 
@@ -101,10 +133,9 @@
     };
 
     LoginView.prototype.login = function(e) {
-      var res;
       e.preventDefault();
       this.$("[type=submit]").attr("disabled", "disabled");
-      res = this.model.save({
+      this.model.save({
         username: this.$("[name=username]").val(),
         password: this.$("[name=password]").val()
       });
@@ -125,17 +156,21 @@
 
     ProjectsView.prototype.el = '#page';
 
+    ProjectsView.prototype.templateURL = "templates/projects.html";
+
     ProjectsView.prototype.initialize = function(options) {
-      return this.collection.on("reset", this.render, this);
+      this.collection.on("reset", this.render, this);
+      this.$el.html(this.template());
+      return this.$projects = this.$(".projects");
     };
 
     ProjectsView.prototype.render = function() {
       var project, _i, _len, _ref;
-      this.$el.empty();
+      this.$projects.empty();
       _ref = this.collection.models;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         project = _ref[_i];
-        this.$el.append((new ProjectItemView({
+        this.$projects.append((new ProjectItemView({
           model: project
         })).render().el);
       }
@@ -252,6 +287,10 @@
       StoriesView.__super__.constructor.apply(this, arguments);
     }
 
+    StoriesView.prototype.events = {
+      "click .story": "open"
+    };
+
     StoriesView.prototype.initialize = function(options) {
       return this.collection.on("reset", this.render, this);
     };
@@ -267,6 +306,10 @@
         })).render().el);
       }
       return this;
+    };
+
+    StoriesView.prototype.open = function() {
+      return this.$el.toggleClass("open");
     };
 
     return StoriesView;
@@ -341,6 +384,7 @@
     IterationsView: IterationsView,
     AppView: AppView,
     LoginView: LoginView,
+    ErrorView: ErrorView,
     AppHeaderView: AppHeaderView,
     AppFooterView: AppFooterView
   };
