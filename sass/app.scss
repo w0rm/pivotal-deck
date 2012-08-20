@@ -129,12 +129,12 @@ footer {}
          margin-left: 2px * ($i - 1);
        }
      }
-    
      position: relative;
      height:  230px;
      display: inline-block;
 
      .card {
+        @include border-radius(4px);
         white-space: normal;
         padding: 15px;
         position: absolute;

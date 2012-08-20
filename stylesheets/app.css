@@ -4896,8 +4896,13 @@ header nav {
   margin-top: 98px;
   margin-left: 98px;
 }
-/* line 137, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
 .stories .story .card {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
   white-space: normal;
   padding: 15px;
   position: absolute;
