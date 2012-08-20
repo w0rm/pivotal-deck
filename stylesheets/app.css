@@ -4538,6 +4538,7 @@ header nav {
 }
 /* line 109, ../sass/app.scss */
 .stories .story {
+  cursor: pointer;
   width: 2px;
   height: 220px;
   margin-bottom: -10px;
@@ -4547,11 +4548,11 @@ header nav {
   -o-transition: width 0.1s;
   transition: width 0.1s;
 }
-/* line 114, ../sass/app.scss */
+/* line 115, ../sass/app.scss */
 .stories .story .test {
   background: blue;
 }
-/* line 117, ../sass/app.scss */
+/* line 118, ../sass/app.scss */
 .stories .story .card {
   white-space: normal;
   padding: 15px;
@@ -4561,7 +4562,7 @@ header nav {
   border: 1px solid #555;
   background: #eee;
 }
-/* line 130, ../sass/app.scss */
+/* line 131, ../sass/app.scss */
 .stories.open .story {
   width: 160px;
 }
