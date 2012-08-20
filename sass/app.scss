@@ -139,21 +139,20 @@ footer {}
   position: relative;
   @include transition(width 0.4s);
   @for $i from 1 through 20 {
-    &:nth-child(#{$i}) { z-index: 20-$i; }
+    &:nth-last-child(#{$i}) { z-index: $i; }
   }
 }
 
 .stories {
   display: inline-block;
   white-space: nowrap;
-  direction: rtl;
   .story {
-     direction: ltr;
      cursor: pointer;
      @for $i from 1 through 50 {
-       &:nth-child(#{$i}) .card{ 
+       &:nth-last-child(#{$i}) .card{ 
          margin-top: 2px * ($i - 1);
          margin-left: 2px * ($i - 1);
+         z-index: $i;
        }
      }
      position: relative;
