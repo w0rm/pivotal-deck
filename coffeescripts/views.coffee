@@ -13,6 +13,9 @@ class AppView extends Backbone.View
   
   renderError: (error) ->
     @$(".alerts").append (new ErrorView error).render().el
+  
+  clearErrors: ->
+    @$(".alerts .close").trigger "click"
 
 
 class ErrorView extends Backbone.View
@@ -70,6 +73,7 @@ class LoginView extends Backbone.View
   login: (e) ->
     e.preventDefault()
     @$("[type=submit]").attr "disabled", "disabled"
+    app.appView.clearErrors()
     @model.save
       username: @$("[name=username]").val()
       password: @$("[name=password]").val()

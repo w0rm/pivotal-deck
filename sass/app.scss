@@ -103,7 +103,7 @@ footer {}
 
 .iteration {
   display: inline-block;
-  min-width: 150px;
+  min-width: 160px;
   .title {
     font-weight: normal;
     font-size: inherit;
@@ -111,9 +111,7 @@ footer {}
   position: relative;
   @include transition(width 0.4s);
   @for $i from 1 through 20 {
-     &:nth-child(#{$i}) { 
-       z-index: 20-$i;
-     }
+     &:nth-child(#{$i}) { z-index: 20-$i; }
    }
 }
 

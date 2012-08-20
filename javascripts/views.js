@@ -25,6 +25,10 @@
       return this.$(".alerts").append((new ErrorView(error)).render().el);
     };
 
+    AppView.prototype.clearErrors = function() {
+      return this.$(".alerts .close").trigger("click");
+    };
+
     return AppView;
 
   })(Backbone.View);
@@ -135,6 +139,7 @@
     LoginView.prototype.login = function(e) {
       e.preventDefault();
       this.$("[type=submit]").attr("disabled", "disabled");
+      app.appView.clearErrors();
       this.model.save({
         username: this.$("[name=username]").val(),
         password: this.$("[name=password]").val()

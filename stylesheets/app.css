@@ -4535,7 +4535,7 @@ header nav {
 /* line 104, ../sass/app.scss */
 .iteration {
   display: inline-block;
-  min-width: 150px;
+  min-width: 160px;
   position: relative;
   -webkit-transition: width 0.4s;
   -moz-transition: width 0.4s;
@@ -4628,13 +4628,13 @@ header nav {
   z-index: 0;
 }
 
-/* line 120, ../sass/app.scss */
+/* line 118, ../sass/app.scss */
 .stories {
   display: inline-block;
   white-space: nowrap;
   direction: rtl;
 }
-/* line 125, ../sass/app.scss */
+/* line 123, ../sass/app.scss */
 .stories .story {
   direction: ltr;
   cursor: pointer;
@@ -4646,257 +4646,257 @@ header nav {
   -o-transition: width 0.4s;
   transition: width 0.4s;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(1) .card {
   margin-top: 0px;
   margin-left: 0px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(2) .card {
   margin-top: 2px;
   margin-left: 2px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(3) .card {
   margin-top: 4px;
   margin-left: 4px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(4) .card {
   margin-top: 6px;
   margin-left: 6px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(5) .card {
   margin-top: 8px;
   margin-left: 8px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(6) .card {
   margin-top: 10px;
   margin-left: 10px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(7) .card {
   margin-top: 12px;
   margin-left: 12px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(8) .card {
   margin-top: 14px;
   margin-left: 14px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(9) .card {
   margin-top: 16px;
   margin-left: 16px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(10) .card {
   margin-top: 18px;
   margin-left: 18px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(11) .card {
   margin-top: 20px;
   margin-left: 20px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(12) .card {
   margin-top: 22px;
   margin-left: 22px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(13) .card {
   margin-top: 24px;
   margin-left: 24px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(14) .card {
   margin-top: 26px;
   margin-left: 26px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(15) .card {
   margin-top: 28px;
   margin-left: 28px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(16) .card {
   margin-top: 30px;
   margin-left: 30px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(17) .card {
   margin-top: 32px;
   margin-left: 32px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(18) .card {
   margin-top: 34px;
   margin-left: 34px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(19) .card {
   margin-top: 36px;
   margin-left: 36px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(20) .card {
   margin-top: 38px;
   margin-left: 38px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(21) .card {
   margin-top: 40px;
   margin-left: 40px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(22) .card {
   margin-top: 42px;
   margin-left: 42px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(23) .card {
   margin-top: 44px;
   margin-left: 44px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(24) .card {
   margin-top: 46px;
   margin-left: 46px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(25) .card {
   margin-top: 48px;
   margin-left: 48px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(26) .card {
   margin-top: 50px;
   margin-left: 50px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(27) .card {
   margin-top: 52px;
   margin-left: 52px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(28) .card {
   margin-top: 54px;
   margin-left: 54px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(29) .card {
   margin-top: 56px;
   margin-left: 56px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(30) .card {
   margin-top: 58px;
   margin-left: 58px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(31) .card {
   margin-top: 60px;
   margin-left: 60px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(32) .card {
   margin-top: 62px;
   margin-left: 62px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(33) .card {
   margin-top: 64px;
   margin-left: 64px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(34) .card {
   margin-top: 66px;
   margin-left: 66px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(35) .card {
   margin-top: 68px;
   margin-left: 68px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(36) .card {
   margin-top: 70px;
   margin-left: 70px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(37) .card {
   margin-top: 72px;
   margin-left: 72px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(38) .card {
   margin-top: 74px;
   margin-left: 74px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(39) .card {
   margin-top: 76px;
   margin-left: 76px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(40) .card {
   margin-top: 78px;
   margin-left: 78px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(41) .card {
   margin-top: 80px;
   margin-left: 80px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(42) .card {
   margin-top: 82px;
   margin-left: 82px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(43) .card {
   margin-top: 84px;
   margin-left: 84px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(44) .card {
   margin-top: 86px;
   margin-left: 86px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(45) .card {
   margin-top: 88px;
   margin-left: 88px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(46) .card {
   margin-top: 90px;
   margin-left: 90px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(47) .card {
   margin-top: 92px;
   margin-left: 92px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(48) .card {
   margin-top: 94px;
   margin-left: 94px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(49) .card {
   margin-top: 96px;
   margin-left: 96px;
 }
-/* line 129, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .stories .story:nth-child(50) .card {
   margin-top: 98px;
   margin-left: 98px;
 }
-/* line 139, ../sass/app.scss */
+/* line 137, ../sass/app.scss */
 .stories .story .card {
   white-space: normal;
   padding: 15px;
@@ -4910,15 +4910,15 @@ header nav {
   -o-transition: margin 0.4s;
   transition: margin 0.4s;
 }
-/* line 149, ../sass/app.scss */
+/* line 147, ../sass/app.scss */
 .stories .story:hover .card {
   background: #eee;
 }
-/* line 157, ../sass/app.scss */
+/* line 155, ../sass/app.scss */
 .stories.open .story {
   width: 160px;
 }
-/* line 159, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 .stories.open .story .card {
   margin: 0;
 }
