@@ -36,6 +36,9 @@ class AppRouter extends Backbone.Router
 
 app.util.loadTemplates(app.views).done =>
   
+  # Setting tracker token here will disable login form
+  #app.trackerToken = ""
+  
   $(document).foundationAlerts()
   $(document).foundationButtons()
   #$(document).foundationAccordion()
