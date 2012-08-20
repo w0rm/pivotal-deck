@@ -4475,64 +4475,105 @@ header nav {
 }
 /* line 59, ../sass/app.scss */
 .projects .project {
-  margin: 30px;
+  margin: 20px;
   vertical-align: top;
   display: inline-block;
   position: relative;
-  width: 200px;
+  width: 210px;
   height: 300px;
-  padding: 10px 20px;
-  background: #ddd;
+  padding: 10px;
+  background: url('/images/tile.png?1345473472') 0 0;
   border: 1px solid #555;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
-/* line 70, ../sass/app.scss */
+/* line 61, ../sass/app.scss */
+.projects .project .info {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  background: #fff;
+  color: #444;
+  padding: 5px;
+}
+/* line 67, ../sass/app.scss */
+.projects .project .info h4 {
+  margin: 10px 0;
+}
+/* line 68, ../sass/app.scss */
+.projects .project .info p {
+  font-size: 12px;
+  margin: 0;
+}
+/* line 84, ../sass/app.scss */
 .projects .project:before, .projects .project:after {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
   content: "";
-  border: 1px solid #555;
-  top: -21px;
-  left: -21px;
+  top: -16px;
+  left: -16px;
 }
-/* line 79, ../sass/app.scss */
+/* line 93, ../sass/app.scss */
 .projects .project:before {
   height: 100%;
-  top: -11px;
-  border-right: none;
+  top: -9px;
+  border-left: 1px solid #555;
+  border-bottom: 1px solid #555;
   -webkit-transform: skew(0, 45deg);
   -moz-transform: skew(0, 45deg);
   -ms-transform: skew(0, 45deg);
   -o-transform: skew(0, 45deg);
   transform: skew(0, 45deg);
+  background: url('/images/tile.png?1345473472') -15px 0, -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #000000), color-stop(100%, #ffffff));
+  background: url('/images/tile.png?1345473472') -15px 0, -webkit-linear-gradient(top left, #000000, #ffffff);
+  background: url('/images/tile.png?1345473472') -15px 0, -moz-linear-gradient(top left, #000000, #ffffff);
+  background: url('/images/tile.png?1345473472') -15px 0, -o-linear-gradient(top left, #000000, #ffffff);
+  background: url('/images/tile.png?1345473472') -15px 0, linear-gradient(top left, #000000, #ffffff);
 }
-/* line 85, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 .projects .project:after {
   width: 100%;
-  left: -11px;
-  border-bottom: none;
+  left: -9px;
+  border-top: 1px solid #555;
+  border-right: 1px solid #555;
   -webkit-transform: skew(45deg, 0);
   -moz-transform: skew(45deg, 0);
   -ms-transform: skew(45deg, 0);
   -o-transform: skew(45deg, 0);
   transform: skew(45deg, 0);
+  background: url('/images/tile.png?1345473472') 0 15px;
 }
-/* line 91, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 .projects .project .members {
   list-style-type: none;
 }
-/* line 93, ../sass/app.scss */
+/* line 115, ../sass/app.scss */
 .projects .project .members li {
   display: inline;
 }
+/* line 116, ../sass/app.scss */
+.projects .project .members li .ico-smiley {
+  border: none;
+  color: #444;
+}
 
-/* line 99, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .backlog, .icebox, .current {
   white-space: nowrap;
   margin-bottom: 20px;
 }
 
-/* line 104, ../sass/app.scss */
+/* line 132, ../sass/app.scss */
 .iteration {
   display: inline-block;
   min-width: 160px;
@@ -4542,99 +4583,99 @@ header nav {
   -o-transition: width 0.4s;
   transition: width 0.4s;
 }
-/* line 107, ../sass/app.scss */
+/* line 135, ../sass/app.scss */
 .iteration .title {
   font-weight: normal;
   font-size: inherit;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(1) {
   z-index: 19;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(2) {
   z-index: 18;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(3) {
   z-index: 17;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(4) {
   z-index: 16;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(5) {
   z-index: 15;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(6) {
   z-index: 14;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(7) {
   z-index: 13;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(8) {
   z-index: 12;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(9) {
   z-index: 11;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(10) {
   z-index: 10;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(11) {
   z-index: 9;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(12) {
   z-index: 8;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(13) {
   z-index: 7;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(14) {
   z-index: 6;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(15) {
   z-index: 5;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(16) {
   z-index: 4;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(17) {
   z-index: 3;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(18) {
   z-index: 2;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(19) {
   z-index: 1;
 }
-/* line 114, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .iteration:nth-child(20) {
   z-index: 0;
 }
 
-/* line 118, ../sass/app.scss */
+/* line 146, ../sass/app.scss */
 .stories {
   display: inline-block;
   white-space: nowrap;
   direction: rtl;
 }
-/* line 123, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 .stories .story {
   direction: ltr;
   cursor: pointer;
@@ -4646,257 +4687,257 @@ header nav {
   -o-transition: width 0.4s;
   transition: width 0.4s;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(1) .card {
   margin-top: 0px;
   margin-left: 0px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(2) .card {
   margin-top: 2px;
   margin-left: 2px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(3) .card {
   margin-top: 4px;
   margin-left: 4px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(4) .card {
   margin-top: 6px;
   margin-left: 6px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(5) .card {
   margin-top: 8px;
   margin-left: 8px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(6) .card {
   margin-top: 10px;
   margin-left: 10px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(7) .card {
   margin-top: 12px;
   margin-left: 12px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(8) .card {
   margin-top: 14px;
   margin-left: 14px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(9) .card {
   margin-top: 16px;
   margin-left: 16px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(10) .card {
   margin-top: 18px;
   margin-left: 18px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(11) .card {
   margin-top: 20px;
   margin-left: 20px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(12) .card {
   margin-top: 22px;
   margin-left: 22px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(13) .card {
   margin-top: 24px;
   margin-left: 24px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(14) .card {
   margin-top: 26px;
   margin-left: 26px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(15) .card {
   margin-top: 28px;
   margin-left: 28px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(16) .card {
   margin-top: 30px;
   margin-left: 30px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(17) .card {
   margin-top: 32px;
   margin-left: 32px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(18) .card {
   margin-top: 34px;
   margin-left: 34px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(19) .card {
   margin-top: 36px;
   margin-left: 36px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(20) .card {
   margin-top: 38px;
   margin-left: 38px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(21) .card {
   margin-top: 40px;
   margin-left: 40px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(22) .card {
   margin-top: 42px;
   margin-left: 42px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(23) .card {
   margin-top: 44px;
   margin-left: 44px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(24) .card {
   margin-top: 46px;
   margin-left: 46px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(25) .card {
   margin-top: 48px;
   margin-left: 48px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(26) .card {
   margin-top: 50px;
   margin-left: 50px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(27) .card {
   margin-top: 52px;
   margin-left: 52px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(28) .card {
   margin-top: 54px;
   margin-left: 54px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(29) .card {
   margin-top: 56px;
   margin-left: 56px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(30) .card {
   margin-top: 58px;
   margin-left: 58px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(31) .card {
   margin-top: 60px;
   margin-left: 60px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(32) .card {
   margin-top: 62px;
   margin-left: 62px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(33) .card {
   margin-top: 64px;
   margin-left: 64px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(34) .card {
   margin-top: 66px;
   margin-left: 66px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(35) .card {
   margin-top: 68px;
   margin-left: 68px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(36) .card {
   margin-top: 70px;
   margin-left: 70px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(37) .card {
   margin-top: 72px;
   margin-left: 72px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(38) .card {
   margin-top: 74px;
   margin-left: 74px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(39) .card {
   margin-top: 76px;
   margin-left: 76px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(40) .card {
   margin-top: 78px;
   margin-left: 78px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(41) .card {
   margin-top: 80px;
   margin-left: 80px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(42) .card {
   margin-top: 82px;
   margin-left: 82px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(43) .card {
   margin-top: 84px;
   margin-left: 84px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(44) .card {
   margin-top: 86px;
   margin-left: 86px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(45) .card {
   margin-top: 88px;
   margin-left: 88px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(46) .card {
   margin-top: 90px;
   margin-left: 90px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(47) .card {
   margin-top: 92px;
   margin-left: 92px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(48) .card {
   margin-top: 94px;
   margin-left: 94px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(49) .card {
   margin-top: 96px;
   margin-left: 96px;
 }
-/* line 127, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .stories .story:nth-child(50) .card {
   margin-top: 98px;
   margin-left: 98px;
 }
-/* line 136, ../sass/app.scss */
+/* line 162, ../sass/app.scss */
 .stories .story .card {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -4904,26 +4945,65 @@ header nav {
   -o-border-radius: 4px;
   border-radius: 4px;
   white-space: normal;
-  padding: 15px;
+  padding: 10px;
   position: absolute;
   width: 150px;
   height: 200px;
   border: 1px solid #555;
-  background: #ddd;
-  -webkit-transition: margin 0.4s;
-  -moz-transition: margin 0.4s;
-  -o-transition: margin 0.4s;
-  transition: margin 0.4s;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-transition: margin 0.4s, box-shadow 0.4s;
+  -moz-transition: margin 0.4s, box-shadow 0.4s;
+  -o-transition: margin 0.4s, box-shadow 0.4s;
+  transition: margin 0.4s, box-shadow 0.4s;
+  /* http://lea.verou.me/css3patterns/#japanese-cube
+  $col1: lighten(#445, 40%);
+  $col3: lighten(#556, 40%);
+  $col2: lighten(#99a, 20%);
+  $width: 30px;
+  $height: 50px;
+  @include background (
+    linear-gradient(60deg, $col1 12%, transparent 12.1%, transparent 87%, $col1 87.1%, $col1) 0 0,
+    linear-gradient(-60deg, $col1 12%, transparent 12.1%, transparent 87%, $col1 87.1%, $col1) 0 0,
+    linear-gradient(60deg, $col1 12%, transparent 12.1%, transparent 87%, $col1 87.1%, $col1) $width/2 $height/2,
+    linear-gradient(-60deg, $col1 12%, transparent 12.1%, transparent 87%, $col1 87.1%, $col1) $width/2 $height/2,
+    linear-gradient(30deg, $col2 25%, transparent 25.1%, transparent 75%, $col2 75%, $col2) 0 0, 
+    linear-gradient(30deg, $col2 25%, transparent 25.1%, transparent 75%, $col2 75%, $col2) $width/2 $height/2
+  );
+  background-color: $col3;
+  background-size: $width $height;
+  */
+  background: url('/images/tile.png?1345473472');
 }
-/* line 147, ../sass/app.scss */
+/* line 190, ../sass/app.scss */
+.stories .story .card .title {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  background: #fff;
+  color: #444;
+  padding: 3px;
+}
+/* line 198, ../sass/app.scss */
 .stories .story:hover .card {
-  background: #eee;
+  margin-top: -10px;
+  -webkit-box-shadow: 0 10px 3px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 3px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 3px 0 rgba(0, 0, 0, 0.25);
 }
-/* line 155, ../sass/app.scss */
+/* line 205, ../sass/app.scss */
 .stories.open .story {
   width: 160px;
 }
-/* line 157, ../sass/app.scss */
+/* line 207, ../sass/app.scss */
 .stories.open .story .card {
   margin: 0;
+}
+/* line 208, ../sass/app.scss */
+.stories.open .story:hover .card {
+  margin-top: -10px;
 }
