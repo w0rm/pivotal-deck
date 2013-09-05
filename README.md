@@ -8,6 +8,9 @@ This application is built with
 and currently allows to login, browse projects, and see stories in
 projects icebox, current and backlog sections.
 
+## Note
+
+Api v3 of Pivotal Tracker is now obsolete. But I'm going to leave this project as an example of using xml api with Backbone.
 
 ## Requirments
 
